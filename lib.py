@@ -46,9 +46,9 @@ class AngQuick():
         os.mkdir(module_path)
         
         self.call(command_string + '.module.js')
-        self.call(command_string + '-page.component.js')
-        self.call(command_string + '-page.controller.js')
-        self.call(command_string + '-page.html')
+        self.call(command_string + '.component.js')
+        self.call(command_string + '.controller.js')
+        self.call(command_string + '.html')
 
 
 # NOTES
