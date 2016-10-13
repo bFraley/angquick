@@ -8,22 +8,19 @@ class AngQuick():
         self.aq_text = 'angquick: '
         self.osname = os.name
 
-
     def call(self, shell_string):
         if os.system(shell_string):
             return True
         else:
             return False
 
-
     def check_posix(self):
         if not self.osname == 'posix':
-            print('angquick currently only supports posix operating systems.\n')
+            print('posix operating system required.\n')
             exit(1)
         else:
             print('\n{} {}'.format(self.aq_text, self.osname))
             return True
-
 
     def try_open_read(self, filename):
 
@@ -35,12 +32,10 @@ class AngQuick():
             with fp:
                 return fp.readlines()
 
-
     def prompt(self):
         newang_component = input('Angquick - New component name: ')
         print('prompt called')
         return newang_component
-
 
     def gen_new_component_files(self, name):
         module_path = 'client/' + name
