@@ -1,0 +1,7 @@
+todo.txt
+
+-Comment lib file
+-README
+-tests
+-A ton more error / exception handling
+-More/next Angular generation features

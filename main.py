@@ -1,3 +1,6 @@
+# angquick - Copyright by Brett Fraley 2016
+# https://github.com/bFraley/angquick
+
 from lib import AngQuick
 
 def start():
