@@ -1,13 +1,19 @@
 #!/usr/bin/env python
 # https://github.com/bFraley/angquick
 
+import sys
 from angquick.lib import AngQuick
 
 def start():
     aq = AngQuick()
     aq.check_posix()
-    component_name = aq.prompt()
-    aq.gen_new_component_files(component_name)
+
+    if not len(sys.argv) > 1:
+        print('angquick exiting - no argument(s) were provided\n')
+        exit(0)    
+    else:
+        component_name = sys.argv[1]
+        aq.gen_new_component_files(component_name)
 
 # call start()
 if __name__ == "__main__":
