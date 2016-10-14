@@ -7,7 +7,7 @@ setup(
   author = 'Brett Fraley',
   author_email = 'brettfraley@gmail.com',
   url = 'https://github.com/bfraley/angquick',
-  download_url = 'https://github.com/peterldowns/mypackage/tarball/0.1',
+  download_url = 'https://github.com/bfraley/angquick/tarball/1.0',
   keywords = ['AngularJS', 'file template', 'Django/Angular'],
   classifiers = [],
 )
