@@ -16,32 +16,19 @@ class AngQuick():
 
     def check_posix(self):
         if not self.osname == 'posix':
-            print('posix operating system required.\n')
+            print('ANGQUICK: posix OS required.\n')
             exit(1)
-        else:
-            print('\n{} {}'.format(self.aq_text, self.osname))
-            return True
-
-    def try_open_read(self, filename):
-
-        try:
-            fp = open(filename)
-        except PermissionError:
-            return "file permission error"
-        else:
-            with fp:
-                return fp.readlines()
 
     def prompt(self):
-        newang_component = input('Angquick - New component name: ')
+        newang_component = input('Angquick - New module name: ')
         print('prompt called')
         return newang_component
 
     def gen_new_component_files(self, name):
-        module_path = 'client/' + name
+        module_path = name
         touch = 'touch '
         slash = '/'
-        command_string = touch + module_path + slash + name
+        command_string = 'touch' + module_path + '/' + name
 
         os.mkdir(module_path)
         
@@ -49,12 +36,3 @@ class AngQuick():
         self.call(command_string + '.component.js')
         self.call(command_string + '.controller.js')
         self.call(command_string + '.html')
-
-
-# NOTES
-
-"""
-os.access(path, mode, *, dir_fd=None, effective_ids=False, follow_symlinks=True)
-"""
-
-
