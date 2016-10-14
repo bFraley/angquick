@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# https://github.com/bFraley/angquick
+
+from angquick.lib import AngQuick
+
+def start():
+    aq = AngQuick()
+    aq.check_posix()
+    component_name = aq.prompt()
+    aq.gen_new_component_files(component_name)
+
+# call start()
+if __name__ == "__main__":
+    start()

@@ -10,5 +10,5 @@ setup(
   download_url = 'https://github.com/bfraley/angquick/tarball/1.0',
   keywords = ['AngularJS', 'file template', 'Django/Angular'],
   classifiers = [],
-  scripts=['bin/angquick'],
+  scripts=['bin/aq'],
 )
